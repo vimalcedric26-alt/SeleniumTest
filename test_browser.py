@@ -1,4 +1,4 @@
-from seleniumpractice import Browser
+from _test_pom.seleniumpractice import Browser
 
 def test_getbrowserpageinfo():
     url = 'https://www.saucedemo.com/'
