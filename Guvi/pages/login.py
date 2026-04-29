@@ -13,16 +13,22 @@ class LoginPage:
         self.login_btn = (By.ID,'login-btn')
         self.invalid_error = (By.XPATH,'//div[@class="invalid-feedback is-invalid"]')
         #menu_items_locators
-        self.live_class_loc = (By.XPATH,'//p[text()="LIVE Classes"]')
-        self.course_loc = (By.XPATH,'//p[text()="Courses"]')
-        self.practice_loc = (By.XPATH, '//p[text()="Practice"]')
-        self.resource_loc = (By.XPATH, '//p[text()="Resources"]')
-        self.our_product_loc = (By.XPATH, '//p[text()="Our Products"]')
+        self.live_class_loc = (By.XPATH, "//p[contains(text(),'LIVE Classes')]")
+        self.course_loc = (By.XPATH, "//p[contains(text(),'Courses')]")
+        self.practice_loc = (By.XPATH, "//p[contains(text(),'Practice')]")
+        self.resource_loc = (By.XPATH, "//p[contains(text(),'Resources')]")
+        self.our_product_loc = (By.XPATH, "//p[contains(text(),'Our Products')]")
         #Logout locator
         self.profile_icon = (By.XPATH,'//img[@class ="rounded-full gravatar w-8 h-8"]')
         self.logout_loc = (By.XPATH,'//p[text()="Sign Out"]')
         #dobby_locator
         self.dobby_loc = (By.XPATH,'//span[@role="button"]')
+
+    def safe_click(self, locator):
+        element = self.wait.until(EC.visibility_of_element_located(locator))
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+        self.wait.until(EC.element_to_be_clickable(locator))
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_login(self):
         self.wait.until(EC.element_to_be_clickable(self.login_loc)).click()
@@ -42,11 +48,11 @@ class LoginPage:
             return None
 
     def menu_items(self):
-        self.wait.until(EC.presence_of_element_located(self.live_class_loc)).click()
-        self.wait.until(EC.presence_of_element_located(self.course_loc)).click()
-        self.wait.until(EC.presence_of_element_located(self.practice_loc)).click()
-        self.wait.until(EC.presence_of_element_located(self.resource_loc)).click()
-        self.wait.until(EC.presence_of_element_located(self.our_product_loc)).click()
+        self.safe_click(self.live_class_loc)
+        self.safe_click(self.course_loc)
+        self.safe_click(self.practice_loc)
+        self.safe_click(self.resource_loc)
+        self.safe_click(self.our_product_loc)
 
     def click_dobby(self):
         self.wait.until(EC.element_to_be_clickable(self.dobby_loc)).click()
