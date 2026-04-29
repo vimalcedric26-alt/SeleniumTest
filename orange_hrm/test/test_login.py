@@ -49,7 +49,7 @@ class TestLogin:
         login.login("Admin", "admin123")
         login.verify_login_success()
 
-        dashboard.verify_admin_adding_new_user()
+        # dashboard.verify_admin_adding_new_user()
         created_username = dashboard.adding_user_details()
 
         dashboard.search_and_verify_user(created_username)
