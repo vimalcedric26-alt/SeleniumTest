@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_Admin_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: Page URL expected to be 're.compile('viewSystemUsers')'\nActual value: https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser \nCall log:\n  - Expect \"to_have_url\" with timeout 10000ms\n    14 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser\"\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x000001A720B950F0>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser'>\n\n    def test_Admin_page(self,page):\n        login = LoginPage(page)\n        dashboard = DashboardPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n        dashboard.verify_admin_adding_new_user()\n>       dashboard.adding_user_details()\n\norange_hrm\\test\\test_login.py:41: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.dashboard.DashboardPage object at 0x000001A720BBF380>\n\n    def adding_user_details(self):\n        username = \"vimal\" + str(int(time.time()))\n        password = \"Admin@123\"\n    \n        dropdowns = self.page.locator(\"div.oxd-select-text\")\n    \n        # Role\n        dropdowns.nth(0).click()\n        self.page.locator(\".oxd-select-option\", has_text=\"Admin\").click()\n    \n        # \u2705 Employee selection (FIXED)\n        field = self.page.get_by_placeholder(\"Type for hints...\")\n    \n        field.click()\n        field.fill(\"a\")  # broader search\n    \n        options = self.page.locator(\".oxd-autocomplete-option\")\n    \n        expect(options.first).to_be_visible(timeout=10000)\n    \n        # \ud83d\udc47 IMPORTANT: pick a valid one reliably\n        options.first.click()\n    \n        # \u2705 VERIFY selection happened (CRITICAL)\n        selected_value = field.input_value()\n        print(\"Selected employee:\", selected_value)\n    \n        assert selected_value != \"\", \"Employee NOT selected\"\n    \n        errors = self.page.locator(\".oxd-input-field-error-message\")\n    \n        if errors.count() > 0:\n            print(\"Before Save Errors:\", errors.all_text_contents())\n        # Status\n        dropdowns.nth(1).click()\n        self.page.locator(\".oxd-select-option\", has_text=\"Enabled\").click()\n    \n        # Username\n        self.page.locator('input.oxd-input').nth(1).fill(username)\n    \n        # Password\n        password_fields = self.page.locator('input[type=\"password\"]')\n        password_fields.nth(0).fill(password)\n        password_fields.nth(1).fill(password)\n    \n        # Save\n        self.page.get_by_role(\"button\", name=\"Save\").click()\n    \n        # \u2705 Wait properly\n>       expect(self.page).to_have_url(re.compile(\"viewSystemUsers\"), timeout=10000)\nE       AssertionError: Page URL expected to be 're.compile('viewSystemUsers')'\nE       Actual value: https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser \nE       Call log:\nE         - Expect \"to_have_url\" with timeout 10000ms\nE           14 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser\"\n\norange_hrm\\pages\\dashboard.py:74: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "21 Apr 2026, 19:09",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

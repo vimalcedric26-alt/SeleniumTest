@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_menu_items[chromium]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Page' object has no attribute 'wait'\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x000001757471D220>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'>\n\n    def test_menu_items(self,page):\n        login_page = LoginPage(page)\n    \n        login_page.load()\n>       login_page.menu_items_present()\n\norange_hrm\\test\\test_login.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.login.LoginPage object at 0x00000175747474D0>\n\n    def menu_items_present(self):\n>       self.page.wait.until(EC.element_to_be_clickable(self.admin_loc)).click()\n        ^^^^^^^^^^^^^^\nE       AttributeError: 'Page' object has no attribute 'wait'\n\norange_hrm\\pages\\login.py:36: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "18 Apr 2026, 11:54",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

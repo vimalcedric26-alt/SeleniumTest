@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_user_management_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: cannot unpack non-iterable NoneType object\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x000001579C8E5D90>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser'>\n\n    def test_user_management_page(self, page):\n        login = LoginPage(page)\n        dashboard = DashboardPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n        # expect(self.page).to_have_url(re.compile(\"dashboard\"))\n    \n>       username, password = dashboard.verify_admin_adding_new_user()\n        ^^^^^^^^^^^^^^^^^^\nE       TypeError: cannot unpack non-iterable NoneType object\n\norange_hrm\\test\\test_login.py:57: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "27 Apr 2026, 17:37",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

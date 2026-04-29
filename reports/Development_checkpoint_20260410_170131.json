@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_guvi_project",
+          "name": "test_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Login' object has no attribute 'name_loc'. Did you mean: 'Name_loc'?\nDetails: self = <test_guvi_project.TestGuvi object at 0x0000015C2FAB6F50>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"4c6a0988-191b-4759-822f-03bd837ea1d1\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"4c6a0988-191b-4759-822f-03bd837ea1d1\")>)\n\n    def test_login(self,setup):\n        driver,wait = setup\n        page = GuviPage(driver)\n    \n        login = Login(driver)\n        wait.until(EC.element_to_be_clickable(login.signup_loc)).click()\n    \n>       login.enter_name(wait, \"Vimal Cedric\")\n\nGuvi\\tests\\test_guvi_project.py:57: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Guvi.pages.login.Login object at 0x0000015C2FA930E0>\nwait = <selenium.webdriver.support.wait.WebDriverWait (session=\"4c6a0988-191b-4759-822f-03bd837ea1d1\")>\nname = 'Vimal Cedric'\n\n    def enter_name(self, wait, name):\n>       wait.until(EC.visibility_of_element_located(self.name_loc)).send_keys(name)\n                                                    ^^^^^^^^^^^^^\nE       AttributeError: 'Login' object has no attribute 'name_loc'. Did you mean: 'Name_loc'?\n\nGuvi\\pages\\login.py:16: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Apr 2026, 17:01",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.test_guvi_project",
+          "name": "test_login_button",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Test_Guvi_page' object has no attribute 'guvi'\nDetails: self = <test_guvi_project.Test_Guvi_page object at 0x000001D60F181FD0>\n\n    def test_login_button(self):\n>       assert self.guvi.is_login_button_ready()\n               ^^^^^^^^^\nE       AttributeError: 'Test_Guvi_page' object has no attribute 'guvi'\n\nGuvi\\test_guvi_project.py:42: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Apr 2026, 13:09",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

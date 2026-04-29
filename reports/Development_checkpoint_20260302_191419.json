@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_16.test_world_population",
+          "name": "test_live_world_population",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: file C:\\Users\\vimal\\PycharmProjects\\seleniumtest\\Task_16\\test_world_population.py, line 5\n  def test_live_world_population(setup):\nE       fixture 'setup' not found\n>       available fixtures: _artifacts_recorder, _pw_artifacts_folder, _verify_url, base_url, browser, browser_channel, browser_context_args, browser_name, browser_type, browser_type_launch_args, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, connect_options, context, delete_output_dir, device, doctest_namespace, extra, extras, include_metadata_in_junit_xml, is_chromium, is_firefox, is_webkit, launch_browser, logger, metadata, monkeypatch, new_context, output_path, page, playwright, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, save_test_result, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\vimal\\PycharmProjects\\seleniumtest\\Task_16\\test_world_population.py:5",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "02 Mar 2026, 19:14",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

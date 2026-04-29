@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_scenario_valid_credential",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: NameError: name 'ExcelData' is not defined\nDetails: self = <tests.test_login.TestLogin object at 0x000001A56C2FF750>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"9057755c-d4ab-4809-9333-9f1575d8bfc2\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"9057755c-d4ab-4809-9333-9f1575d8bfc2\")>)\n\n    def test_positive_scenario_valid_credential(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_login()\n    \n>       page.enter_user_details(\"vimalcedric26@gmail.com\",\"Cassy@091124\")\n\nGuvi\\tests\\test_login.py:9: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Guvi.pages.login.LoginPage object at 0x000001A56C37A3C0>\nemail = 'vimalcedric26@gmail.com', password = 'Cassy@091124'\n\n    def enter_user_details(self,email,password):\n>       excel_values = ExcelData(self.filename, self.sheetname)\n                       ^^^^^^^^^\nE       NameError: name 'ExcelData' is not defined\n\nGuvi\\pages\\login.py:33: NameError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Apr 2026, 18:29",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

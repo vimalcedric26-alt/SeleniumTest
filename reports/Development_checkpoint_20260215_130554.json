@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "POM.test_check_login",
+          "name": "test_user_admin_creation",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: WebDriver.find_element() takes from 1 to 3 positional arguments but 42 were given\nDetails: def test_user_admin_creation():\n        launch_browser = Browser()\n        firefox_browser = launch_browser.invoke_browser()\n        user_login = Login(firefox_browser)\n        user_login.navigate_url()\n        user_login.login_()\n        dashboard_ = Dashboard(firefox_browser)\n        dashboard_.click_admin_menu()\n        dashboard_.click_add_btn()\n>       dashboard_.fill_user_details()\n\nPOM\\test_check_login.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <POM.Dashboard.Dashboard object at 0x000001EEF656DE80>\n\n    def fill_user_details(self):\n        excel_values = ExcelData(self.filename,self.sheetname)\n        workbook, worksheet = excel_values.load_excel_wrkbook()\n        user_data = excel_values.get_data_(worksheet=worksheet)\n        self.driver.find_element(*self.user_role_drpdwn).click()\n        role = self.driver.find_elements(*self.select_user_role)\n        for user_role in role:  # ESS\n            role = user_role.text\n            if role == user_data[2]:\n                user_role.click()\n                break\n            elif role == user_data[2]:\n                user_role.click()\n                break\n            else:\n                continue\n    \n        self.driver.find_element(*self.emp_name_hints).send_keys(user_data[3])\n        element = self.driver.find_elements(*self.select_first_emp_name)\n        for first_element in range(len(element)):\n            element[first_element].click()\n            break\n        self.driver.find_element(*self.username_field).send_keys(user_data[5])\n>       self.driver.find_element(*self.place_loc)\nE       TypeError: WebDriver.find_element() takes from 1 to 3 positional arguments but 42 were given\n\nPOM\\Dashboard.py:55: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Feb 2026, 13:06",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

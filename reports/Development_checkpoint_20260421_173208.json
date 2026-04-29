@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_Admin_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: Page URL expected to be 're.compile('dashboard')'\nActual value: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login \nCall log:\n  - Expect \"to_have_url\" with timeout 5000ms\n    2 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\n    - waiting for\" https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate\" navigation to finish...\n    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\n    6 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x000001D561FC50F0>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'>\n\n    def test_Admin_page(self,page):\n        login = LoginPage(page)\n        dashboard = DashboardPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n        dashboard.verify_admin_adding_new_user()\n        dashboard.adding_user_details()\n    \n        dashboard.logout()\n    \n        login.login(\"vimal12345\", \"Admin@123456\")\n    \n        # Step 5: Validate login success\n>       expect(page).to_have_url(re.compile(\"dashboard\"))\nE       AssertionError: Page URL expected to be 're.compile('dashboard')'\nE       Actual value: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login \nE       Call log:\nE         - Expect \"to_have_url\" with timeout 5000ms\nE           2 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\nE           - waiting for\" https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate\" navigation to finish...\nE           - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\nE           6 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\n\norange_hrm\\test\\test_login.py:48: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "21 Apr 2026, 17:32",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_valid_credential",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'LoginPage' object has no attribute 'click_login'\nDetails: self = <test_login.TestSignup object at 0x000001B2E11D4410>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"a0582876-3baf-4152-82b2-19b374b08e8b\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"a0582876-3baf-4152-82b2-19b374b08e8b\")>)\n\n    def test_positive_valid_credential(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_signup_button()\n        page.go_to_login()\n    \n        # Step 2: Enter credentials\n        page.enter_valid_credential(\n            \"vimalcedric26@gmail.com\",\n            \"Cassy@091124\"\n        )\n    \n        # Step 3: Click login\n>       page.click_login()\n        ^^^^^^^^^^^^^^^^\nE       AttributeError: 'LoginPage' object has no attribute 'click_login'\n\nGuvi\\tests\\test_login.py:34: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "13 Apr 2026, 20:01",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

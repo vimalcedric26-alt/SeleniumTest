@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_user_management_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'TestLogin' object has no attribute 'page'\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x000002010BE016D0>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'>\n\n    def test_user_management_page(self, page):\n        login = LoginPage(page)\n        dashboard = DashboardPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n>       expect(self.page).to_have_url(re.compile(\"dashboard\"))\n               ^^^^^^^^^\nE       AttributeError: 'TestLogin' object has no attribute 'page'\n\norange_hrm\\test\\test_login.py:55: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "22 Apr 2026, 15:59",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

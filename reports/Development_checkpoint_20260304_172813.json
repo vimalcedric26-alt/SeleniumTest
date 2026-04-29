@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: @pytest.fixture\n    def setup():\n>       driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))\n                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nTask_15\\conftest.py:8: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\Lib\\site-packages\\webdriver_manager\\firefox.py:39: in install\n    driver_path = self._get_driver_binary_path(self.driver)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\webdriver_manager\\core\\manager.py:35: in _get_driver_binary_path\n    binary_path = self._cache_manager.find_driver(driver)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\webdriver_manager\\core\\driver_cache.py:107: in find_driver\n    driver_version = self.get_cache_key_driver_version(driver)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\webdriver_manager\\core\\driver_cache.py:154: in get_cache_key_driver_version\n    return driver.get_driver_version_to_download()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\webdriver_manager\\core\\driver.py:48: in get_driver_version_to_download\n    return self.get_latest_release_version()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\firefox.py:29: in get_latest_release_version\n    resp = self._http_client.get(\n.venv\\Lib\\site-packages\\webdriver_manager\\core\\http.py:36: in get\n    self.validate_response(resp)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nresp = <Response [500]>\n\n    @staticmethod\n    def validate_response(resp: requests.Response):\n        status_code = resp.status_code\n        if status_code == 404:\n            raise ValueError(f\"There is no such driver by url {resp.url}\")\n        elif status_code == 401:\n            raise ValueError(f\"API Rate limit exceeded. You have to add GH_TOKEN!!!\")\n        elif resp.status_code != 200:\n>           raise ValueError(\n                f\"response body:\\n{resp.text}\\n\"\n                f\"request url:\\n{resp.request.url}\\n\"\n                f\"response headers:\\n{dict(resp.headers)}\\n\"\n            )\nE           ValueError: response body:\nE           {\nE               \"documentation_url\": \"https://githubstatus.com\",\nE               \"message\": \"Something went wrong. Please try again. If the problem persists, please contact us.\"\nE             }\nE             \nE           request url:\nE           https://api.github.com/repos/mozilla/geckodriver/releases/latest\nE           response headers:\nE           {'Date': 'Wed, 04 Mar 2026 11:58:17 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': \"default-src 'none'; style-src 'unsafe-inline'\", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'Content-Length': '162', 'X-GitHub-Request-Id': '6BE8:334D44:7EDF66:92F99B:69A81E58'}\n\n.venv\\Lib\\site-packages\\webdriver_manager\\core\\http.py:19: ValueError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "04 Mar 2026, 17:28",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "POM.test_check_login",
+          "name": "test_user_admin_creation",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/Kundan_Kumar/Desktop/Notes/Guvi_Notes/user_details.xlsx'\nDetails: def test_user_admin_creation():\n        launch_browser = Browser()\n        firefox_browser = launch_browser.invoke_browser()\n        user_login = Login(firefox_browser)\n        user_login.navigate_url()\n        user_login.login_()\n        dashboard_ = Dashboard(firefox_browser)\n        dashboard_.click_admin_menu()\n        dashboard_.click_add_btn()\n>       dashboard_.fill_user_details()\n\nPOM\\test_check_login.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nPOM\\Dashboard.py:33: in fill_user_details\n    workbook, worksheet = excel_values.load_excel_wrkbook()\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPOM\\load_userdata.py:22: in load_excel_wrkbook\n    work_book = openpyxl.load_workbook(filename=self.fname)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\openpyxl\\reader\\excel.py:346: in load_workbook\n    reader = ExcelReader(filename, read_only, keep_vba,\n.venv\\Lib\\site-packages\\openpyxl\\reader\\excel.py:123: in __init__\n    self.archive = _validate_archive(fn)\n                   ^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\openpyxl\\reader\\excel.py:95: in _validate_archive\n    archive = ZipFile(filename, 'r')\n              ^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <zipfile.ZipFile [closed]>\nfile = 'C:/Users/Kundan_Kumar/Desktop/Notes/Guvi_Notes/user_details.xlsx'\nmode = 'r', compression = 0, allowZip64 = True, compresslevel = None\n\n    def __init__(self, file, mode=\"r\", compression=ZIP_STORED, allowZip64=True,\n                 compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):\n        \"\"\"Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',\n        or append 'a'.\"\"\"\n        if mode not in ('r', 'w', 'x', 'a'):\n            raise ValueError(\"ZipFile requires mode 'r', 'w', 'x', or 'a'\")\n    \n        _check_compression(compression)\n    \n        self._allowZip64 = allowZip64\n        self._didModify = False\n        self.debug = 0  # Level of printing: 0 through 3\n        self.NameToInfo = {}    # Find file info given name\n        self.filelist = []      # List of ZipInfo instances for archive\n        self.compression = compression  # Method of compression\n        self.compresslevel = compresslevel\n        self.mode = mode\n        self.pwd = None\n        self._comment = b''\n        self._strict_timestamps = strict_timestamps\n        self.metadata_encoding = metadata_encoding\n    \n        # Check that we don't try to write with nonconforming codecs\n        if self.metadata_encoding and mode != 'r':\n            raise ValueError(\n                \"metadata_encoding is only supported for reading files\")\n    \n        # Check if we were passed a file-like object\n        if isinstance(file, os.PathLike):\n            file = os.fspath(file)\n        if isinstance(file, str):\n            # No, it's a filename\n            self._filePassed = 0\n            self.filename = file\n            modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',\n                        'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}\n            filemode = modeDict[mode]\n            while True:\n                try:\n>                   self.fp = io.open(file, filemode)\n                              ^^^^^^^^^^^^^^^^^^^^^^^\nE                   FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/Kundan_Kumar/Desktop/Notes/Guvi_Notes/user_details.xlsx'\n\n..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\zipfile\\__init__.py:1453: FileNotFoundError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Feb 2026, 12:49",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

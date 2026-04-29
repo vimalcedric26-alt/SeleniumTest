@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_Admin_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: \u274c Employee NOT selected\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x000002C4D6FA50F0>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser'>\n\n    def test_Admin_page(self,page):\n        login = LoginPage(page)\n        dashboard = DashboardPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n        dashboard.verify_admin_adding_new_user()\n>       dashboard.adding_user_details()\n\norange_hrm\\test\\test_login.py:41: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.dashboard.DashboardPage object at 0x000002C4D6FCB380>\n\n    def adding_user_details(self):\n        username = \"vimal\" + str(int(time.time()))\n        password = \"Admin@123\"\n    \n        dropdowns = self.page.locator(\"div.oxd-select-text\")\n    \n        # Role\n        dropdowns.nth(0).click()\n        self.page.locator(\".oxd-select-option\", has_text=\"Admin\").click()\n    \n        field = self.page.get_by_placeholder(\"Type for hints...\")\n    \n        field.click()\n        field.fill(\"a\")\n    \n        # Wait for dropdown\n        self.page.wait_for_selector(\".oxd-autocomplete-option\")\n    \n        # Use keyboard (VERY reliable)\n        self.page.keyboard.press(\"ArrowDown\")\n        self.page.keyboard.press(\"Enter\")\n    \n        selected_value = field.input_value()\n        print(\"Selected employee:\", selected_value)\n    \n>       assert selected_value != \"a\", \"\u274c Employee NOT selected\"\n               ^^^^^^^^^^^^^^^^^^^^^\nE       AssertionError: \u274c Employee NOT selected\n\norange_hrm\\pages\\dashboard.py:50: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "21 Apr 2026, 19:11",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

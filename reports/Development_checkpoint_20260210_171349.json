@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_14._test_Zen_portal_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'tuple' object has no attribute 'navigate_url'\nDetails: def test_login_scenario():\n        launch_browser = ()\n        firefox_browser = launch_browser\n        user_login = firefox_browser\n>       user_login.navigate_url(\"https://classify.zenclass.in/\")\n        ^^^^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'tuple' object has no attribute 'navigate_url'\n\nTask_14\\_test_Zen_portal_login.py:36: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Feb 2026, 17:13",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

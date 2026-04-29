@@ -1,0 +1,39 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_signup_form",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'LoginPage' object has no attribute 'go_to_login'\nDetails: self = <test_login.TestSignup object at 0x000002072FEB6C10>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"6b38f01a-45e1-44c6-ac29-b9cb5b7612ef\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"6b38f01a-45e1-44c6-ac29-b9cb5b7612ef\")>)\n\n    def test_signup_form(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_signup_button()\n    \n        # Step 2: Fill basic details\n        page.enter_signup_details(\n            \"Cedric\",\n            \"cedric26@gmail.com\",\n            \"test1@091124\"\n        )\n        # Assertion (basic)\n>       page.go_to_login()\n        ^^^^^^^^^^^^^^^^\nE       AttributeError: 'LoginPage' object has no attribute 'go_to_login'\n\nGuvi\\tests\\test_login.py:17: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_signup_btn",
+          "developer": "-",
+          "test_description": "",
+          "status": "Passed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Apr 2026, 15:28",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

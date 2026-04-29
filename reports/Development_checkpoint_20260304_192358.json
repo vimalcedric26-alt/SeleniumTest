@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: Login.login_hrm() missing 2 required positional arguments: 'user_data' and 'row_number'\nDetails: setup = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"f0da7665-8952-4475-81a7-7e61be039769\")>\n\n    def test_login_scenario(setup):\n        user_login = Login(setup)\n    \n        user_login.navigate_url()\n>       url_of_page = user_login.login_hrm()\n                      ^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: Login.login_hrm() missing 2 required positional arguments: 'user_data' and 'row_number'\n\nTask_15\\test_hrm_login.py:11: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "04 Mar 2026, 19:24",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

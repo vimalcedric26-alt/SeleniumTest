@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_menu_items",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: ValueError: Unsupported type: <class 'playwright.sync_api._generated.Locator'>\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x00000195441548A0>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'>\n\n    def test_menu_items(self,page):\n        login = LoginPage(page)\n        dashboard = DashboardPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n>       dashboard.verify_menu_items_click(page)\n\norange_hrm\\test\\test_login.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\norange_hrm\\pages\\dashboard.py:14: in verify_menu_items_click\n    expect(item).to_be_visible()\n    ^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <playwright.async_api.Expect object at 0x0000019544130980>\nactual = <Locator frame=<Frame name= url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'> selector='internal:role=link[name=\"Admin\"i]'>\nmessage = None\n\n    def __call__(\n        self, actual: Union[Page, Locator, APIResponse], message: Optional[str] = None\n    ) -> Union[PageAssertions, LocatorAssertions, APIResponseAssertions]:\n        if isinstance(actual, Page):\n            return PageAssertions(\n                PageAssertionsImpl(actual._impl_obj, self._timeout, message=message)\n            )\n        elif isinstance(actual, Locator):\n            return LocatorAssertions(\n                LocatorAssertionsImpl(actual._impl_obj, self._timeout, message=message)\n            )\n        elif isinstance(actual, APIResponse):\n            return APIResponseAssertions(\n                APIResponseAssertionsImpl(\n                    actual._impl_obj, self._timeout, message=message\n                )\n            )\n>       raise ValueError(f\"Unsupported type: {type(actual)}\")\nE       ValueError: Unsupported type: <class 'playwright.sync_api._generated.Locator'>\n\n.venv\\Lib\\site-packages\\playwright\\async_api\\__init__.py:143: ValueError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "21 Apr 2026, 14:01",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

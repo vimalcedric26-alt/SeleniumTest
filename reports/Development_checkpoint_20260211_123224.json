@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_12.Guvi_Test",
+          "name": "test_guvi_navigation",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'WebDriver' object has no attribute 'login'\nDetails: def test_guvi_navigation():\n        driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))\n        driver.get(\"https://www.guvi.in/\")\n    \n        login_page = driver\n        home_page = driver\n    \n        # Login\n>       login_page.login(\"vimalcedric26@gmail.com\", \"Cassy@091124\")\n        ^^^^^^^^^^^^^^^^\nE       AttributeError: 'WebDriver' object has no attribute 'login'\n\nTask_12\\Guvi_Test.py:45: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "11 Feb 2026, 12:33",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_guvi_project",
+          "name": "test_check_in_signup_button",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'GuviPage' object has no attribute 'register'\nDetails: self = <test_guvi_project.TestGuvi object at 0x000001C484CC1D00>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"95a0b29d-804c-4da8-bbef-0399e3da0808\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"95a0b29d-804c-4da8-bbef-0399e3da0808\")>)\n\n    def test_check_in_signup_button(self, setup):\n        driver, wait = setup\n        page = GuviPage(driver)\n        driver.get(\"https://www.guvi.in/register\")\n    \n>       assert page.register == \"https://www.guvi.in/register\"\n               ^^^^^^^^^^^^^\nE       AttributeError: 'GuviPage' object has no attribute 'register'\n\nGuvi\\tests\\test_guvi_project.py:46: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Apr 2026, 16:21",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

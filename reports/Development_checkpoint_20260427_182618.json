@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_forgot_pwd_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x0000014C8AE9A030>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode'>\n\n    def test_forgot_pwd_page(self,page):\n        login = LoginPage(page)\n        login.load()\n        login.forgot_password_click()\n        login.verify_forgot_password_redirect()\n        login.submit_reset_password(\"Admin\")\n>       login.verify_reset_confirmation()\n\norange_hrm\\test\\test_login.py:69: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\norange_hrm\\pages\\login.py:54: in verify_reset_confirmation\n    self.page.wait_for_load_state(\"networkidle\")\n.venv\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:9152: in wait_for_load_state\n    self._sync(self._impl_obj.wait_for_load_state(state=state, timeout=timeout))\n.venv\\Lib\\site-packages\\playwright\\_impl\\_page.py:572: in wait_for_load_state\n    return await self._main_frame.wait_for_load_state(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\playwright\\_impl\\_frame.py:273: in wait_for_load_state\n    return await self._wait_for_load_state_impl(state, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Frame name= url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode'>\nstate = 'networkidle', timeout = None\n\n    async def _wait_for_load_state_impl(\n        self, state: DocumentLoadState = None, timeout: float = None\n    ) -> None:\n        if not state:\n            state = \"load\"\n        if state not in (\"load\", \"domcontentloaded\", \"networkidle\", \"commit\"):\n            raise Error(\n                \"state: expected one of (load|domcontentloaded|networkidle|commit)\"\n            )\n        waiter = self._setup_navigation_waiter(\"wait_for_load_state\", timeout)\n    \n        if state in self._load_states:\n            waiter.log(f'  not waiting, \"{state}\" event already fired')\n            # TODO: align with upstream\n            waiter._fulfill(None)\n        else:\n    \n            def handle_load_state_event(actual_state: str) -> bool:\n                waiter.log(f'\"{actual_state}\" event fired')\n                return actual_state == state\n    \n            waiter.wait_for_event(\n                self._event_emitter,\n                \"loadstate\",\n                handle_load_state_event,\n            )\n>       await waiter.result()\nE       playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.\n\n.venv\\Lib\\site-packages\\playwright\\_impl\\_frame.py:301: TimeoutError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "27 Apr 2026, 18:26",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

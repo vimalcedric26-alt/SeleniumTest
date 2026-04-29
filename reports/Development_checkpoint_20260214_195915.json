@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_14.test_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: element_to_be_clickable() takes 1 positional argument but 2 were given\nDetails: def test_login_scenario():\n        driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))\n        driver.maximize_window()\n        driver.implicitly_wait(20)\n        zen = ZenPortalLogin(driver)\n        zen.navigate_url()\n        zen.login()\n>       zen.open_dropdown()\n\nTask_14\\test_login.py:13: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Task_14.Zen_portal_login.ZenPortalLogin object at 0x0000013D45854590>\n\n    def open_dropdown(self):\n    \n>       self.wait.until(EC.element_to_be_clickable(*self.profile_icon)).click()\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: element_to_be_clickable() takes 1 positional argument but 2 were given\n\nTask_14\\Zen_portal_login.py:35: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "14 Feb 2026, 19:59",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

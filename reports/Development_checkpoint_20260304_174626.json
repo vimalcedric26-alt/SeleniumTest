@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Data' object has no attribute 'load_excel_wrkbook'\nDetails: setup = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"2ab464bc-a346-42c7-a683-376526f5492f\")>\n\n    def test_login_scenario(setup):\n        user_login = Login(setup)\n    \n        user_login.navigate_url()\n>       url_of_page = user_login.login_hrm()\n                      ^^^^^^^^^^^^^^^^^^^^^^\n\nTask_15\\test_hrm_login.py:9: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Task_15.hrm_login.Login object at 0x00000200835A4830>\n\n    def login_hrm(self):\n        self.navigate_url()\n    \n        wait = WebDriverWait(self.driver, 10)\n    \n        excel_value = Data(self.filename, self.sheetname)\n>       workbook, worksheet = excel_value.load_excel_wrkbook()\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'Data' object has no attribute 'load_excel_wrkbook'\n\nTask_15\\hrm_login.py:26: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "04 Mar 2026, 17:46",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

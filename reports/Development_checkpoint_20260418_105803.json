@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_valid_login[chromium]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'LoginPage' object has no attribute 'load'\nDetails: self = <test.test_login.TestLogin object at 0x000001FE9F0BA0D0>\npage = <Page url='about:blank'>\n\n    def test_valid_login(self, page):\n        login_page = LoginPage(page)\n    \n>       login_page.load()\n        ^^^^^^^^^^^^^^^\nE       AttributeError: 'LoginPage' object has no attribute 'load'\n\norange_hrm\\test\\test_login.py:8: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "18 Apr 2026, 10:58",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

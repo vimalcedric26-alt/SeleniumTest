@@ -1,0 +1,72 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario[2-user_data0]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: assert 'PASS' == datetime.datetime(2026, 3, 4, 0, 0)\nDetails: setup = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"cb94981b-a066-4b4d-a92d-0b1df8b5ab6a\")>\nrow_number = 2\nuser_data = [1, 'Admin', 'admin123', datetime.datetime(2026, 3, 4, 0, 0), 1, 'test123', ...]\n\n    @pytest.mark.parametrize(\"row_number, user_data\", get_test_data())\n    def test_login_scenario(setup, row_number, user_data):\n    \n        user_login = Login(setup, filename)\n    \n        expected_result = user_data[3]   # Expected column\n        actual_result = user_login.login_hrm(user_data, row_number)\n    \n>       assert actual_result == expected_result\nE       AssertionError: assert 'PASS' == datetime.datetime(2026, 3, 4, 0, 0)\n\nTask_15\\test_hrm_login.py:23: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario[3-user_data1]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: assert 'FAIL' == None\nDetails: setup = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"50574455-26f8-42eb-91f3-27ee08d1abcf\")>\nrow_number = 3, user_data = [2, 'Admin', 'wrong123', None, None, None, ...]\n\n    @pytest.mark.parametrize(\"row_number, user_data\", get_test_data())\n    def test_login_scenario(setup, row_number, user_data):\n    \n        user_login = Login(setup, filename)\n    \n        expected_result = user_data[3]   # Expected column\n        actual_result = user_login.login_hrm(user_data, row_number)\n    \n>       assert actual_result == expected_result\nE       AssertionError: assert 'FAIL' == None\n\nTask_15\\test_hrm_login.py:23: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario[4-user_data2]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: assert 'FAIL' == None\nDetails: setup = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"7c66884c-1687-48e0-b8c2-a7987f89b811\")>\nrow_number = 4, user_data = [3, 'user1', 'pass1', None, None, None, ...]\n\n    @pytest.mark.parametrize(\"row_number, user_data\", get_test_data())\n    def test_login_scenario(setup, row_number, user_data):\n    \n        user_login = Login(setup, filename)\n    \n        expected_result = user_data[3]   # Expected column\n        actual_result = user_login.login_hrm(user_data, row_number)\n    \n>       assert actual_result == expected_result\nE       AssertionError: assert 'FAIL' == None\n\nTask_15\\test_hrm_login.py:23: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario[5-user_data3]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: assert 'FAIL' == None\nDetails: setup = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"d1effd8c-4047-447e-88f5-e7d6ccd48d0e\")>\nrow_number = 5, user_data = [4, 'user2', 'pass2', None, None, None, ...]\n\n    @pytest.mark.parametrize(\"row_number, user_data\", get_test_data())\n    def test_login_scenario(setup, row_number, user_data):\n    \n        user_login = Login(setup, filename)\n    \n        expected_result = user_data[3]   # Expected column\n        actual_result = user_login.login_hrm(user_data, row_number)\n    \n>       assert actual_result == expected_result\nE       AssertionError: assert 'FAIL' == None\n\nTask_15\\test_hrm_login.py:23: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario[6-user_data4]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: assert 'PASS' == None\nDetails: setup = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"539fa2b6-77c1-4093-9daa-b9a7becaea9b\")>\nrow_number = 6, user_data = [5, 'Admin', 'admin123', None, None, None, ...]\n\n    @pytest.mark.parametrize(\"row_number, user_data\", get_test_data())\n    def test_login_scenario(setup, row_number, user_data):\n    \n        user_login = Login(setup, filename)\n    \n        expected_result = user_data[3]   # Expected column\n        actual_result = user_login.login_hrm(user_data, row_number)\n    \n>       assert actual_result == expected_result\nE       AssertionError: assert 'PASS' == None\n\nTask_15\\test_hrm_login.py:23: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "04 Mar 2026, 19:56",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

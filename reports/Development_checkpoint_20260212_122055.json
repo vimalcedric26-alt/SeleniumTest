@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_14._test_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: ZenPortalLogin.__init__() missing 1 required positional argument: 'driver'\nDetails: def test_login_scenario():\n        driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))\n        driver.maximize_window()\n>       title_of_page = ZenPortalLogin()\n                        ^^^^^^^^^^^^^^^^\nE       TypeError: ZenPortalLogin.__init__() missing 1 required positional argument: 'driver'\n\nTask_14\\_test_login.py:9: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "12 Feb 2026, 12:21",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

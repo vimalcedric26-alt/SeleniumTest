@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_leave_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Page' object has no attribute 'leave_input'\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x0000021368C41E50>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'>\n\n    def test_leave_page(self,page):\n        login = LoginPage(page)\n        # dashboard = DashboardPage(page)\n        leave = LeavePage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n>       leave.verify_leave_click()\n\norange_hrm\\test\\test_login.py:89: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.leave.LeavePage object at 0x0000021368C6B8C0>\n\n    def verify_leave_click(self):\n>       expect(self.page.leave_input).to_be_visible()\n               ^^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'Page' object has no attribute 'leave_input'\n\norange_hrm\\pages\\leave.py:11: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "28 Apr 2026, 16:40",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

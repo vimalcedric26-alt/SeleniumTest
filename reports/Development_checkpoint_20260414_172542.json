@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_valid_credential",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: @pytest.fixture\n    def setup():\n        options = Options()\n        # options.set_preference(\"dom.webnotifications.enabled\", False)\n        options.add_argument(\"--disable-infobars\")\n        options.add_argument(\"--disable-geolocation\")\n    \n>       driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nGuvi\\conftest.py:17: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\webdriver.py:45: in __init__\n    super().__init__(\n.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py:55: in __init__\n    self.service.start()\n.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\service.py:112: in start\n    self.assert_process_still_running()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.firefox.service.Service object at 0x00000223179A12B0>\n\n    def assert_process_still_running(self) -> None:\n        \"\"\"Check if the underlying process is still running.\"\"\"\n        return_code = self.process.poll()\n        if return_code:\n>           raise WebDriverException(f\"Service {self._path} unexpectedly exited. Status code was: {return_code}\")\nE           selenium.common.exceptions.WebDriverException: Message: Service C:\\Users\\vimal\\.wdm\\drivers\\chromedriver\\win64\\146.0.7680.165\\chromedriver-win32/chromedriver.exe unexpectedly exited. Status code was: 1\n\n.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\service.py:125: WebDriverException",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "14 Apr 2026, 17:25",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

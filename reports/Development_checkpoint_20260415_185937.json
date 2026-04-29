@@ -1,0 +1,50 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_login_excel[vimalcedric26@gmail.com-Cassy@091124-success]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: cannot unpack non-iterable NoneType object\nDetails: setup = None, email = 'vimalcedric26@gmail.com', password = 'Cassy@091124'\nexpected = 'success'\n\n    @pytest.mark.parametrize(\"email,password,expected\", test_data)\n    def test_login_excel(setup, email, password, expected):\n>       driver, wait = setup\n        ^^^^^^^^^^^^\nE       TypeError: cannot unpack non-iterable NoneType object\n\nGuvi\\tests\\test_login.py:80: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_login_excel[invalid@gmail.com-Cassy@091124-fail]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: cannot unpack non-iterable NoneType object\nDetails: setup = None, email = 'invalid@gmail.com', password = 'Cassy@091124'\nexpected = 'fail'\n\n    @pytest.mark.parametrize(\"email,password,expected\", test_data)\n    def test_login_excel(setup, email, password, expected):\n>       driver, wait = setup\n        ^^^^^^^^^^^^\nE       TypeError: cannot unpack non-iterable NoneType object\n\nGuvi\\tests\\test_login.py:80: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_login_excel[vimalcedric26@gmail.com-wrongpass-fail]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: cannot unpack non-iterable NoneType object\nDetails: setup = None, email = 'vimalcedric26@gmail.com', password = 'wrongpass'\nexpected = 'fail'\n\n    @pytest.mark.parametrize(\"email,password,expected\", test_data)\n    def test_login_excel(setup, email, password, expected):\n>       driver, wait = setup\n        ^^^^^^^^^^^^\nE       TypeError: cannot unpack non-iterable NoneType object\n\nGuvi\\tests\\test_login.py:80: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Apr 2026, 19:00",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

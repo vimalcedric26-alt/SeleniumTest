@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_13.Action_chains",
+          "name": "test_drag_and_drop_negative",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: file C:\\Users\\vimal\\PycharmProjects\\seleniumtest\\Task_13\\Action_chains.py, line 30\n  def test_drag_and_drop_negative(driver):\nE       fixture 'driver' not found\n>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, extra, extras, include_metadata_in_junit_xml, logger, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, save_test_result, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\vimal\\PycharmProjects\\seleniumtest\\Task_13\\Action_chains.py:30",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "17 Feb 2026, 00:15",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

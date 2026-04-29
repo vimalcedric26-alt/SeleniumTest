@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_valid_credential",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'LoginPage' object has no attribute 'enter_valid_credential'\nDetails: self = <test_login.TestSignup object at 0x0000013FBD0F0410>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"53228494-3f75-433b-b12d-4d612fcfa6c9\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"53228494-3f75-433b-b12d-4d612fcfa6c9\")>)\n\n    def test_positive_valid_credential(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_signup_button()\n        page.go_to_login()\n    \n        # Step 2: Enter credentials\n>       page.enter_valid_credential(\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            \"vimalcedric26@gmail.com\",\n            \"Cassy@091124\"\n        )\nE       AttributeError: 'LoginPage' object has no attribute 'enter_valid_credential'\n\nGuvi\\tests\\test_login.py:28: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "13 Apr 2026, 20:20",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

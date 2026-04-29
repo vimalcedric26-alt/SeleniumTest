@@ -1,0 +1,6 @@
+allure-behave==2.15.3
+allure-pytest==2.15.3
+selenium
+webdriver_manager
+pytest
+

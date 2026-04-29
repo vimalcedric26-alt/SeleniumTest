@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "test_homepage",
+          "name": "test_valid_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: assert 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login' == False\nDetails: self = <test_homepage.TestHrm object at 0x000002367A6D5950>\n\n    def test_valid_login(self):\n        expected_url = \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\n        actual_url = my_automation.login()\n>       assert expected_url == actual_url\nE       AssertionError: assert 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login' == False\n\ntest_homepage.py:10: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "18 Feb 2026, 15:57",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

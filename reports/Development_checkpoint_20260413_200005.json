@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_valid_credential",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: 'tuple' object is not callable\nDetails: self = <test_login.TestSignup object at 0x0000017FE2B24410>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"9b844358-0851-442e-b095-1b9f0918e8b8\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"9b844358-0851-442e-b095-1b9f0918e8b8\")>)\n\n    def test_positive_valid_credential(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_signup_button()\n        page.go_to_login()\n>       page.close_popup()\nE       TypeError: 'tuple' object is not callable\n\nGuvi\\tests\\test_login.py:26: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "13 Apr 2026, 20:00",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

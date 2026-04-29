@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_valid_credential",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: selenium.common.exceptions.TimeoutException: Message:\nDetails: self = <test_login.TestSignup object at 0x0000014DC650C410>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"66c2eda8-ba9f-47a3-885f-8b57fa1a82f9\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"66c2eda8-ba9f-47a3-885f-8b57fa1a82f9\")>)\n\n    def test_positive_valid_credential(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_signup_button()\n        page.go_to_login()\n    \n        # Step 2: Enter credentials\n        page.enter_valid_credential(\n            \"vimalcedric26@gmail.com\",\n            \"Cassy@091124\"\n        )\n    \n        # Step 3: Click login\n>       page.click_login()\n\nGuvi\\tests\\test_login.py:34: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nGuvi\\pages\\login.py:44: in click_login\n    self.wait.until(EC.element_to_be_clickable(self.new_login_loc)).click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"66c2eda8-ba9f-47a3-885f-8b57fa1a82f9\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x0000014DC4CF97A0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Literal[False] | T], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Args:\n            method: A callable object that takes a WebDriver instance as an\n                argument.\n            message: Optional message for TimeoutException.\n    \n        Returns:\n            The result of the last call to `method`.\n    \n        Raises:\n            TimeoutException: If 'method' does not return a truthy value within\n                the WebDriverWait object's timeout.\n    \n        Example:\n            >>> from selenium.webdriver.common.by import By\n            >>> from selenium.webdriver.support.ui import WebDriverWait\n            >>> from selenium.webdriver.support import expected_conditions as EC\n            >>>\n            >>> # Wait until an element is visible on the page\n            >>> wait = WebDriverWait(driver, 10)\n            >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n            >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py:121: TimeoutException",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "13 Apr 2026, 19:45",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_guvi_project",
+          "name": "test_check_in_signup_button",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: assert None\n +  where None = check_in_signup_button(<selenium.webdriver.support.wait.WebDriverWait (session=\"0f22a407-6189-45f3-9458-9d54833a0f8b\")>)\n +    where check_in_signup_button = <Guvi.pages.guvi_page.GuviPage object at 0x0000024C415634D0>.check_in_signup_button\nDetails: self = <test_guvi_project.TestGuvi object at 0x0000024C41541D00>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"0f22a407-6189-45f3-9458-9d54833a0f8b\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"0f22a407-6189-45f3-9458-9d54833a0f8b\")>)\n\n    def test_check_in_signup_button(self, setup):\n        driver, wait = setup\n        page = GuviPage(driver)\n    \n>       assert page.check_in_signup_button(wait)\nE       assert None\nE        +  where None = check_in_signup_button(<selenium.webdriver.support.wait.WebDriverWait (session=\"0f22a407-6189-45f3-9458-9d54833a0f8b\")>)\nE        +    where check_in_signup_button = <Guvi.pages.guvi_page.GuviPage object at 0x0000024C415634D0>.check_in_signup_button\n\nGuvi\\tests\\test_guvi_project.py:45: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Apr 2026, 16:12",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

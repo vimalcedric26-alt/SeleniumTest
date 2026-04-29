@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_signup_btn",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: assert 'Login' in 'https://www.guvi.in/sign-in/?sourceUri=http%3A%2F%2Fwww.guvi.in%2F'\n +  where 'https://www.guvi.in/sign-in/?sourceUri=http%3A%2F%2Fwww.guvi.in%2F' = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"24cf8c5c-7a16-4943-8301-87b13bcfe5cd\")>.current_url\nDetails: self = <tests.test_login.TestLogin object at 0x000001D74CB46C10>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"24cf8c5c-7a16-4943-8301-87b13bcfe5cd\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"24cf8c5c-7a16-4943-8301-87b13bcfe5cd\")>)\n\n    def test_positive_signup_btn(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_login()\n    \n        page.enter_user_details()\n    \n    \n>       assert \"Login\" in driver.current_url\nE       assert 'Login' in 'https://www.guvi.in/sign-in/?sourceUri=http%3A%2F%2Fwww.guvi.in%2F'\nE        +  where 'https://www.guvi.in/sign-in/?sourceUri=http%3A%2F%2Fwww.guvi.in%2F' = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"24cf8c5c-7a16-4943-8301-87b13bcfe5cd\")>.current_url\n\nGuvi\\tests\\test_login.py:12: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Apr 2026, 16:03",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

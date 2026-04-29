@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "_test_pom.test_homepage",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Skipped",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Test was not executed",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "01 Mar 2026, 11:07",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

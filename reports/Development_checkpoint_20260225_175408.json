@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "_test_pom.test_homepage",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Excel' object has no attribute 'load_excel_workbook'\nDetails: def test_login_scenario():\n        launch_browser = Browser()\n        firefox_browser = launch_browser.invoke_browser()\n        user_login = Login(firefox_browser)\n        user_login.navigate_url()\n>       url_of_page = user_login.login_()\n                      ^^^^^^^^^^^^^^^^^^^\n\n_test_pom\\test_homepage.py:12: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <_test_pom.seleniumpractice.Login object at 0x0000019484D34590>\n\n    def login_(self):\n        excel_values = Excel(self.filename, self.sheetname)\n>       workbook, worksheet = excel_values.load_excel_workbook()\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'Excel' object has no attribute 'load_excel_workbook'\n\n_test_pom\\seleniumpractice.py:22: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "25 Feb 2026, 17:54",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

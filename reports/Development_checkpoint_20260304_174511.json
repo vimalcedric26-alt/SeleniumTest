@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_15.test_hrm_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Data' object has no attribute 'get_data'. Did you mean: 'get_data_'?\nDetails: setup = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"21eea938-eab5-4e8c-a194-572c9b146726\")>\n\n    def test_login_scenario(setup):\n        user_login = Login(setup)\n    \n        user_login.navigate_url()\n>       url_of_page = user_login.login_hrm()\n                      ^^^^^^^^^^^^^^^^^^^^^^\n\nTask_15\\test_hrm_login.py:9: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Task_15.hrm_login.Login object at 0x000002E011C04830>\n\n    def login_hrm(self):\n        excel_value = Data(self.filename,self.sheetname)\n        workbook, worksheet = excel_value.load_excel_data()\n>       user_data = excel_value.get_data(worksheet=worksheet)\n                    ^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'Data' object has no attribute 'get_data'. Did you mean: 'get_data_'?\n\nTask_15\\hrm_login.py:23: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "04 Mar 2026, 17:45",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

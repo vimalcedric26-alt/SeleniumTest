@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.test_guvi_project",
+          "name": "test_positive_title",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: assert 'GUVI | Learn to code in your native language' == 'HCL GUVI | Learn to code in your native language'\n  \n  - HCL GUVI | Learn to code in your native language\n  ? ----\n  + GUVI | Learn to code in your native language\nDetails: self = <test_guvi_project.Test_Guvi_page object at 0x00000219200E5220>\n\n    def test_positive_title(self):\n        expected_title = \"GUVI | Learn to code in your native language\"\n        actual_title = myguvi.fetch_title()\n>       assert expected_title == actual_title\nE       AssertionError: assert 'GUVI | Learn to code in your native language' == 'HCL GUVI | Learn to code in your native language'\nE         \nE         - HCL GUVI | Learn to code in your native language\nE         ? ----\nE         + GUVI | Learn to code in your native language\n\nGuvi\\test_guvi_project.py:23: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "09 Apr 2026, 19:11",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

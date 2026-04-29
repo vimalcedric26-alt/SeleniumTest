@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "POM.test_check_login",
+          "name": "test_check_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'WebDriver' object has no attribute 'login_'\nDetails: def test_check_login():\n        launch_browser = Browser()\n        firefox_browser  = launch_browser.invoke_browser()\n        user_login = login(firefox_browser)\n        user_login.navigate_url()\n>       title_page = user_login.driver.login_()\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'WebDriver' object has no attribute 'login_'\n\nPOM\\test_check_login.py:9: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "09 Feb 2026, 16:56",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

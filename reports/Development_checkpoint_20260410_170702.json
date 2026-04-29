@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_guvi_project",
+          "name": "test_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Login' object has no attribute 'enter_email'. Did you mean: 'enter_name'?\nDetails: self = <test_guvi_project.TestGuvi object at 0x0000029C8D9D6E50>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"b7ebed88-b524-47e5-80ac-471e1b6c4f80\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"b7ebed88-b524-47e5-80ac-471e1b6c4f80\")>)\n\n    def test_login(self,setup):\n        driver,wait = setup\n        page = GuviPage(driver)\n    \n        login = Login(driver)\n        wait.until(EC.element_to_be_clickable(login.signup_loc)).click()\n    \n        login.enter_name(wait,\"Vimal Cedric\")\n>       login.enter_email(\"vimalcedric26@gmail.com\")\n        ^^^^^^^^^^^^^^^^^\nE       AttributeError: 'Login' object has no attribute 'enter_email'. Did you mean: 'enter_name'?\n\nGuvi\\tests\\test_guvi_project.py:58: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Apr 2026, 17:08",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

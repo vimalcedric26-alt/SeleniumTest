@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_claim_request",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: Page URL expected to be 're.compile('viewMyClaims')'\nActual value: https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewClaim \nCall log:\n  - Expect \"to_have_url\" with timeout 5000ms\n    9 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewClaim\"\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x000002D66CFB2050>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewClaim'>\n\n    def test_claim_request(self, page):\n        login = LoginPage(page)\n        claim = ClaimPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n        claim.verify_claim_click()\n        claim.initiate_claim_request()\n        claim.enter_claim_details()\n        # claim.submit_claim_request()\n        claim.verify_claim_success_message()\n>       claim.verify_claim_history_present()\n\norange_hrm\\test\\test_login.py:109: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.claim.ClaimPage object at 0x000002D66CFEB770>\n\n    def verify_claim_history_present(self):\n        # Navigate to My Claims / Employee Claims page\n        self.page.get_by_role(\"link\", name=\"My Claims\").click()\n    \n>       expect(self.page).to_have_url(re.compile(\"viewMyClaims\"))\nE       AssertionError: Page URL expected to be 're.compile('viewMyClaims')'\nE       Actual value: https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewClaim \nE       Call log:\nE         - Expect \"to_have_url\" with timeout 5000ms\nE           9 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewClaim\"\n\norange_hrm\\pages\\claim.py:61: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "28 Apr 2026, 17:33",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

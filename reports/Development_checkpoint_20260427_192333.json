@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_forgot_pwd_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: playwright._impl._errors.TimeoutError: Timeout 10000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/requestResetPassword\" until 'load'\n============================================================\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x0000020266A4A030>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode'>\n\n    def test_forgot_pwd_page(self,page):\n        login = LoginPage(page)\n        login.load()\n        login.forgot_password_click()\n        login.verify_forgot_password_redirect()\n        login.submit_reset_password(\"Admin\")\n>       login.verify_reset_confirmation()\n\norange_hrm\\test\\test_login.py:69: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\norange_hrm\\pages\\login.py:55: in verify_reset_confirmation\n    self.page.wait_for_url(\"**/requestResetPassword\", timeout=10000)\n.venv\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:9197: in wait_for_url\n    self._sync(\n.venv\\Lib\\site-packages\\playwright\\_impl\\_page.py:580: in wait_for_url\n    return await self._main_frame.wait_for_url(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv\\Lib\\site-packages\\playwright\\_impl\\_frame.py:263: in wait_for_url\n    async with self.expect_navigation(\n.venv\\Lib\\site-packages\\playwright\\_impl\\_event_context_manager.py:33: in __aexit__\n    await self._future\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\n    async def continuation() -> Optional[Response]:\n>       event = await waiter.result()\n                ^^^^^^^^^^^^^^^^^^^^^\nE       playwright._impl._errors.TimeoutError: Timeout 10000ms exceeded.\nE       =========================== logs ===========================\nE       waiting for navigation to \"**/requestResetPassword\" until 'load'\nE       ============================================================\n\n.venv\\Lib\\site-packages\\playwright\\_impl\\_frame.py:239: TimeoutError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "27 Apr 2026, 19:23",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_17.tests.test_login",
+          "name": "test_login_logout",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'LoginPage' object has no attribute 'logout'. Did you mean: 'log_out'?\nDetails: setup = <Page url='https://v2.zenclass.in/dashboard'>\n\n    def test_login_logout(setup):\n        page = setup\n        login = LoginPage(page)\n    \n        login.login(\"vimalcedric26@gmail.com\", \"Cassy@091124\")\n        login.close_popup_if_present()\n>       login.logout()\n        ^^^^^^^^^^^^\nE       AttributeError: 'LoginPage' object has no attribute 'logout'. Did you mean: 'log_out'?\n\nTask_17\\tests\\test_login.py:9: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "18 Mar 2026, 17:21",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

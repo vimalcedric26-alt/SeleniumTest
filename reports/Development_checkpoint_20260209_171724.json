@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "POM.test_check_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'Browser' object has no attribute 'invoke_browser'. Did you mean: 'Invoke_browser'?\nDetails: def test_login_scenario():\n        launch_browser = Browser()\n>       firefox_browser = launch_browser.invoke_browser()\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'Browser' object has no attribute 'invoke_browser'. Did you mean: 'Invoke_browser'?\n\nPOM\\test_check_login.py:6: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "09 Feb 2026, 17:17",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

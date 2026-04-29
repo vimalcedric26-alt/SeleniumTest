@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_guvi_project",
+          "name": "test_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: NameError: name 'By' is not defined\nDetails: self = <test_guvi_project.TestGuvi object at 0x0000017462AD7150>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"0eeb453b-f19e-45da-a81b-742fba7558bb\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"0eeb453b-f19e-45da-a81b-742fba7558bb\")>)\n\n    def test_login(self,setup):\n        driver,wait = setup\n        page = GuviPage(driver)\n    \n>       login = Login(driver)\n                ^^^^^^^^^^^^^\n\nGuvi\\tests\\test_guvi_project.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Guvi.pages.login.Login object at 0x0000017462AB30E0>\ndriver = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"0eeb453b-f19e-45da-a81b-742fba7558bb\")>\n\n    def __init__(self,driver):\n        self.driver = driver\n>       self.signup_loc = (By.XPATH,'//button[text()=\"Sign up\"]')\n                           ^^\nE       NameError: name 'By' is not defined\n\nGuvi\\pages\\login.py:4: NameError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Apr 2026, 16:53",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

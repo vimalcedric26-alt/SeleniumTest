@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_forgot_pwd_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: 'Locator' object is not callable\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x000002381980A030>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'>\n\n    def test_forgot_pwd_page(self,page):\n        login = LoginPage(page)\n        login.load()\n>       login.verify_forgot_pwd()\n\norange_hrm\\test\\test_login.py:66: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.login.LoginPage object at 0x0000023819882F90>\n\n    def verify_forgot_pwd(self):\n        expect(self.forgot_pwd_input).to_be_visible()\n>       self.forgot_pwd_input().click()\n        ^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: 'Locator' object is not callable\n\norange_hrm\\pages\\login.py:43: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "27 Apr 2026, 18:23",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

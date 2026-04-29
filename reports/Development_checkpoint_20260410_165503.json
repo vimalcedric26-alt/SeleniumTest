@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_guvi_project",
+          "name": "test_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'tuple' object has no attribute 'enter_name'\nDetails: self = <test_guvi_project.TestGuvi object at 0x000001A7A9827150>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"cd3d111d-216a-42d6-9919-b14a82428f23\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"cd3d111d-216a-42d6-9919-b14a82428f23\")>)\n\n    def test_login(self,setup):\n        driver,wait = setup\n        page = GuviPage(driver)\n    \n        login = Login(driver)\n>       login.Name_loc.enter_name('Vimal Cedric')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'tuple' object has no attribute 'enter_name'\n\nGuvi\\tests\\test_guvi_project.py:54: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Apr 2026, 16:55",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

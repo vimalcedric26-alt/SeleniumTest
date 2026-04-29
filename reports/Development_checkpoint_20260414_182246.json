@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_valid_credential",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: assert 'dashboard' in 'https://www.guvi.in/register/?sourceUri=http%3A%2F%2Fwww.guvi.in%2F'\n +  where 'https://www.guvi.in/register/?sourceUri=http%3A%2F%2Fwww.guvi.in%2F' = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"691fc55c-f230-4d3c-8a67-a6aaa1fea34f\")>.current_url\nDetails: self = <test_login.TestSignup object at 0x00000281746F4410>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"691fc55c-f230-4d3c-8a67-a6aaa1fea34f\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"691fc55c-f230-4d3c-8a67-a6aaa1fea34f\")>)\n\n    def test_positive_valid_credential(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_signup_button()\n        # page.go_to_login()\n    \n        # Step 2: Enter credentials\n        page.enter_signup_details(\n            \"Vimal Cedric\",\n            \"vimalcedric26@gmail.com\",\n            \"Cassy@091124\"\n        )\n        page.enter_mobile('9738875113')\n    \n    \n>       assert \"dashboard\" in driver.current_url\nE       assert 'dashboard' in 'https://www.guvi.in/register/?sourceUri=http%3A%2F%2Fwww.guvi.in%2F'\nE        +  where 'https://www.guvi.in/register/?sourceUri=http%3A%2F%2Fwww.guvi.in%2F' = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"691fc55c-f230-4d3c-8a67-a6aaa1fea34f\")>.current_url\n\nGuvi\\tests\\test_login.py:36: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "14 Apr 2026, 18:23",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

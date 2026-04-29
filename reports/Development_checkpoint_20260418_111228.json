@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_valid_login[chromium]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" with timeout 5000ms\n  - waiting for locator(\"[name=\\\"username\\\"]\")\n    - waiting for\" https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\" navigation to finish...\n    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\"\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x0000027A7E26FB10>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'>\n\n    def test_valid_login(self, page):\n        login_page = LoginPage(page)\n    \n        login_page.load()\n        login_page.login(\"Admin\", \"admin123\")\n>       login_page.verify_login_fields_present()\n\norange_hrm\\test\\test_login.py:10: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.login.LoginPage object at 0x0000027A7E456120>\n\n    def verify_login_fields_present(self):\n>       expect(self.username_input).to_be_visible()\nE       AssertionError: Locator expected to be visible\nE       Actual value: None\nE       Error: element(s) not found \nE       Call log:\nE         - Expect \"to_be_visible\" with timeout 5000ms\nE         - waiting for locator(\"[name=\\\"username\\\"]\")\nE           - waiting for\" https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\" navigation to finish...\nE           - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\"\n\norange_hrm\\pages\\login.py:24: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "18 Apr 2026, 11:12",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

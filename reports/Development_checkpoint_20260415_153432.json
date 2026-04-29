@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_positive_signup_btn",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\nRemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:555:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\nDetails: self = <test_login.TestSignup object at 0x00000177B8224410>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"87148ffc-1e5d-48c0-a187-1d3e8f870ccd\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"87148ffc-1e5d-48c0-a187-1d3e8f870ccd\")>)\n\n    def test_positive_signup_btn(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_signup_button()\n    \n        page.enter_signup_details(\n            \"Vimal\",\n            \"vimal12@gmail.com\",\n            \"test@091124\"\n        )\n        page.enter_mobile('9738875145')\n>       page.click_sign_up()\n\nGuvi\\tests\\test_login.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nGuvi\\pages\\login.py:34: in click_sign_up\n    self.wait.until(EC.visibility_of_element_located(self.signup_btn)).click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"87148ffc-1e5d-48c0-a187-1d3e8f870ccd\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x00000177B7A296F0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Literal[False] | T], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Args:\n            method: A callable object that takes a WebDriver instance as an\n                argument.\n            message: Optional message for TimeoutException.\n    \n        Returns:\n            The result of the last call to `method`.\n    \n        Raises:\n            TimeoutException: If 'method' does not return a truthy value within\n                the WebDriverWait object's timeout.\n    \n        Example:\n            >>> from selenium.webdriver.common.by import By\n            >>> from selenium.webdriver.support.ui import WebDriverWait\n            >>> from selenium.webdriver.support import expected_conditions as EC\n            >>>\n            >>> # Wait until an element is visible on the page\n            >>> wait = WebDriverWait(driver, 10)\n            >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n            >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nE       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5\nE       NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:555:5\nE       dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n\n.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py:121: TimeoutException",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Apr 2026, 15:34",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

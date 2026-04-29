@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_Admin_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: Locator expected to have text 'Add User'\nActual value: None\nError: strict mode violation: locator(\"h6\") resolved to 2 elements:\n    1) <h6 data-v-7b563373=\"\" data-v-c286b6e5=\"\" class=\"oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module\">Admin</h6> aka get_by_role(\"heading\", name=\"Admin\")\n    2) <h6 data-v-7b563373=\"\" class=\"oxd-text oxd-text--h6 orangehrm-main-title\">Add User</h6> aka get_by_role(\"heading\", name=\"Add User\")\n \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"h6\")\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x00000156BCBC50F0>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser'>\n\n    def test_Admin_page(self,page):\n        login = LoginPage(page)\n        dashboard = DashboardPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n        dashboard.verify_admin_adding_new_user()\n>       dashboard.adding_user_details()\n\norange_hrm\\test\\test_login.py:41: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.dashboard.DashboardPage object at 0x00000156BCBEF380>\n\n    def adding_user_details(self):\n        dropdowns = self.page.locator(\"div.oxd-select-text\")\n    \n        dropdowns.nth(0).click()\n        self.page.locator(\".oxd-select-option\", has_text=\"Admin\").click()\n    \n        field = self.page.get_by_placeholder(\"Type for hints...\")\n        field.fill(\"test\")  # use partial text\n        self.page.wait_for_selector(\".oxd-autocomplete-option\")\n    \n        self.page.locator(\".oxd-autocomplete-option\").nth(2).click()\n    \n        dropdowns = self.page.locator(\"div.oxd-select-text\")\n        dropdowns.nth(1).click()\n        # Select option\n        self.page.locator(\".oxd-select-option\", has_text=\"Enabled\").click()\n    \n        # Username\n        # self.page.locator('input.oxd-input').nth(1).fill(\"vimal12345\")\n        # self.page.locator('input[type=\"password\"]').nth(0).fill(\"Admin@123456\")\n        # self.page.locator('input[type=\"password\"]').nth(1).fill(\"Admin@123456\")\n        # self.page.get_by_role(\"button\", name=\"Save\").click()\n        username = \"vimal\" + str(int(time.time()))\n        password = \"Admin@123\"\n    \n        # \u2705 Wait for Add User page\n>       expect(self.page.locator(\"h6\")).to_have_text(\"Add User\")\nE       AssertionError: Locator expected to have text 'Add User'\nE       Actual value: None\nE       Error: strict mode violation: locator(\"h6\") resolved to 2 elements:\nE           1) <h6 data-v-7b563373=\"\" data-v-c286b6e5=\"\" class=\"oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module\">Admin</h6> aka get_by_role(\"heading\", name=\"Admin\")\nE           2) <h6 data-v-7b563373=\"\" class=\"oxd-text oxd-text--h6 orangehrm-main-title\">Add User</h6> aka get_by_role(\"heading\", name=\"Add User\")\nE        \nE       Call log:\nE         - Expect \"to_have_text\" with timeout 5000ms\nE         - waiting for locator(\"h6\")\n\norange_hrm\\pages\\dashboard.py:54: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "21 Apr 2026, 18:07",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

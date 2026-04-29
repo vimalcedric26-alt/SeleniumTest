@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.2 on win32)" generated="2026-04-01T15:38:57.786772" rpa="false" schemaversion="5">
+<suite id="s1" name="Seleniumtest" source="C:\Users\vimal\PycharmProjects\seleniumtest">
+<suite id="s1-s1" name="Task 20" source="C:\Users\vimal\PycharmProjects\seleniumtest\Task_20">
+<suite id="s1-s1-s1" name="Sauce Demo" source="C:\Users\vimal\PycharmProjects\seleniumtest\Task_20\sauce_demo.robot">
+<test id="s1-s1-s1-t1" name="Login Add Products And Checkout" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-01T15:38:57.981417" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-04-01T15:39:07.900398" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-04-01T15:38:57.981070" elapsed="9.919558">Execution terminated by signal</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.903489" elapsed="0.000085"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.904298" elapsed="0.000035"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.905005" elapsed="0.000034"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.905634" elapsed="0.000031"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.906207" elapsed="0.000076"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://div[normalize-space()='Sauce Labs Bike Light']/ancestor::div[@class='inventory_item']//button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.907200" elapsed="0.000083"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://div[normalize-space()='Sauce Labs Backpack']/ancestor::div[@class='inventory_item']//button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.908605" elapsed="0.000122"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://div[normalize-space()='Sauce Labs Bolt T-Shirt']/ancestor::div[@class='inventory_item']//button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.909821" elapsed="0.000103"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://span[@class='shopping_cart_badge']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.912929" elapsed="0.000111"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>xpath://span[@class='shopping_cart_badge']</arg>
+<arg>3</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.914186" elapsed="0.000080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://a[@class='shopping_cart_link']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.915460" elapsed="0.000130"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sauce Labs Bike Light</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.917398" elapsed="0.000111"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.918124" elapsed="0.000263"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sauce Labs Bolt T-Shirt</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.919679" elapsed="0.000089"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.920450" elapsed="0.000030"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=first-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.921167" elapsed="0.000093"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-04-01T15:39:07.922927" elapsed="0.000106"/>
+</kw>
+<status status="FAIL" start="2026-04-01T15:38:57.979688" elapsed="9.946021">Execution terminated by signal</status>
+</test>
+<doc>SauceDemo Application</doc>
+<status status="FAIL" start="2026-04-01T15:38:57.823192" elapsed="10.108033"/>
+</suite>
+<status status="FAIL" start="2026-04-01T15:38:57.821799" elapsed="10.113823"/>
+</suite>
+<status status="FAIL" start="2026-04-01T15:38:57.788295" elapsed="10.150418"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Seleniumtest" id="s1" pass="0" fail="1" skip="0">Seleniumtest</stat>
+<stat name="Task 20" id="s1-s1" pass="0" fail="1" skip="0">Seleniumtest.Task 20</stat>
+<stat name="Sauce Demo" id="s1-s1-s1" pass="0" fail="1" skip="0">Seleniumtest.Task 20.Sauce Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

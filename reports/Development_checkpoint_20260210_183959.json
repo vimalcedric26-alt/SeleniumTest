@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Task_14._test_login",
+          "name": "test_login_scenario",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: 'tuple' object is not callable\nDetails: def test_login_scenario():\n        driver = webdriver.Firefox(\n            service=Service(GeckoDriverManager().install())\n        )\n        driver.maximize_window()\n    \n        zen = ZenPortalLogin(driver)\n        zen.navigate_url()\n>       title = zen.login()\n                ^^^^^^^^^^^\nE       TypeError: 'tuple' object is not callable\n\nTask_14\\_test_login.py:14: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "10 Feb 2026, 18:40",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

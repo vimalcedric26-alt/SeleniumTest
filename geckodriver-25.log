@@ -1,0 +1,19 @@
+1774191977715	geckodriver	INFO	Listening on 127.0.0.1:61982
+1774191980814	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61983" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vimal\\AppData\\Local\\Temp\\rust_mozprofilesTDCkX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1774191981229	Marionette	INFO	Marionette enabled
+1774191981369	Marionette	INFO	Listening on port 62750
+WebDriver BiDi listening on ws://127.0.0.1:61983
+Read port: 62750
+1774191981568	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516, line 1: Script terminated by timeout at:
+173/T/<@https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516:1:3085
+n@https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516:1:2946
+
+1774192036983	Marionette	INFO	Stopped listening on port 62750
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 19: TypeError: can't access property "isChromeWindow", aWindow is null
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+Exiting due to channel error.

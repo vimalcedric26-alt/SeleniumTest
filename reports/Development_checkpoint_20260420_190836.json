@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_menu_items[chromium]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" with timeout 5000ms\n  - waiting for get_by_role(\"link\", name=\"Leave\")\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x0000018924D90FC0>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'>\n\n    def test_menu_items(self,page):\n        login = LoginPage(page)\n        dashboard = DashboardPage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n    \n>       dashboard.verify_menu_items()\n\norange_hrm\\test\\test_login.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.dashboard.DashboardPage object at 0x0000018924DB78C0>\n\n    def verify_menu_items(self):\n        # \u2705 Ensure we are on dashboard\n        expect(self.page).to_have_url(re.compile(\"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\"))\n    \n        for menu in self.menu_items:\n            item = self.page.get_by_role(\"link\", name=menu)\n    \n            # \u2705 Visibility\n>           expect(item).to_be_visible()\nE           AssertionError: Locator expected to be visible\nE           Actual value: None\nE           Error: element(s) not found \nE           Call log:\nE             - Expect \"to_be_visible\" with timeout 5000ms\nE             - waiting for get_by_role(\"link\", name=\"Leave\")\n\norange_hrm\\pages\\dashboard.py:22: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "20 Apr 2026, 19:09",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_signup_form",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'LoginPage' object has no attribute 'drivr'. Did you mean: 'driver'?\nDetails: self = <test_login.TestSignup object at 0x000002044F7EF4D0>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"cb09a499-d514-4b2b-9c96-067532d1c912\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"cb09a499-d514-4b2b-9c96-067532d1c912\")>)\n\n    def test_signup_form(self, setup):\n        driver, wait = setup\n    \n        page = LoginPage(driver)\n    \n        # Step 1: Click signup button\n        page.click_signup_button()\n    \n        # Step 2: Enter details\n        page.enter_signup_details(\"Vimal Cedric\",\"vimalcedric26@gmail.com\",\"Cassy@091124\")\n>       page.click_login()\n\nGuvi\\tests\\test_login.py:15: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Guvi.pages.login.LoginPage object at 0x000002044F8F30E0>\n\n    def click_login(self):\n>       self.drivr.find_element(*self.login_loc).click()\n        ^^^^^^^^^^\nE       AttributeError: 'LoginPage' object has no attribute 'drivr'. Did you mean: 'driver'?\n\nGuvi\\pages\\login.py:26: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "13 Apr 2026, 15:17",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

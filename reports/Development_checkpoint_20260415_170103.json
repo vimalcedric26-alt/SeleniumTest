@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_menu_items_list",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: assert 'sign-in' in 'https://www.guvi.in/'\n +  where 'https://www.guvi.in/' = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"bc9a7e8d-b44c-4b17-aced-3f895e7ae459\")>.current_url\nDetails: self = <tests.test_login.TestLogin object at 0x000002C0D7D990F0>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"bc9a7e8d-b44c-4b17-aced-3f895e7ae459\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"bc9a7e8d-b44c-4b17-aced-3f895e7ae459\")>)\n\n    def test_menu_items_list(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_login()\n    \n        page.enter_user_details(\"vimalcedric26@gmail.com\",\"Cassy@091124\")\n        page.submit_login()\n        page.menu_items()\n    \n    \n>       assert \"sign-in\" in driver.current_url\nE       assert 'sign-in' in 'https://www.guvi.in/'\nE        +  where 'https://www.guvi.in/' = <selenium.webdriver.firefox.webdriver.WebDriver (session=\"bc9a7e8d-b44c-4b17-aced-3f895e7ae459\")>.current_url\n\nGuvi\\tests\\test_login.py:53: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Apr 2026, 17:01",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

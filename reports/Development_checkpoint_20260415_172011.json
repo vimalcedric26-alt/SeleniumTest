@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "Guvi.tests.test_login",
+          "name": "test_menu_items_list",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: TypeError: 'tuple' object is not callable\nDetails: self = <tests.test_login.TestLogin object at 0x0000024DDDF59480>\nsetup = (<selenium.webdriver.firefox.webdriver.WebDriver (session=\"04149df7-a8be-4688-92b3-160fad114b6d\")>, <selenium.webdriver.support.wait.WebDriverWait (session=\"04149df7-a8be-4688-92b3-160fad114b6d\")>)\n\n    def test_menu_items_list(self, setup):\n        driver, wait = setup\n        page = LoginPage(driver)\n        page.click_login()\n    \n        page.enter_user_details(\"vimalcedric26@gmail.com\",\"Cassy@091124\")\n        page.submit_login()\n        page.menu_items()\n        page.open_dropdown()\n>       page.logout_loc()\nE       TypeError: 'tuple' object is not callable\n\nGuvi\\tests\\test_login.py:52: TypeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "15 Apr 2026, 17:20",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "test_homepage",
+          "name": "test_valid_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: assert False == 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'\n +  where False = login()\n +    where login = <seleniumpractice.Hrm object at 0x000001D8F3D1C440>.login\nDetails: def test_valid_login():\n        expected_url = \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\n>       assert myHRMAutomation.login() == expected_url\nE       AssertionError: assert False == 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'\nE        +  where False = login()\nE        +    where login = <seleniumpractice.Hrm object at 0x000001D8F3D1C440>.login\n\ntest_homepage.py:8: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "18 Feb 2026, 16:02",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

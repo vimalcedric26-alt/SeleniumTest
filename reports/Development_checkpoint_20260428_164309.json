@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_leave_page",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AssertionError: Page URL expected to be 're.compile('Assign Leave ')'\nActual value: https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave \nCall log:\n  - Expect \"to_have_url\" with timeout 5000ms\n    9 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave\"\nDetails: self = <orange_hrm.test.test_login.TestLogin object at 0x0000017CB0221C50>\npage = <Page url='https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave'>\n\n    def test_leave_page(self,page):\n        login = LoginPage(page)\n        # dashboard = DashboardPage(page)\n        leave = LeavePage(page)\n    \n        login.load()\n        login.login(\"Admin\", \"admin123\")\n        leave.verify_leave_click()\n>       leave.verify_assign_leave()\n\norange_hrm\\test\\test_login.py:90: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.leave.LeavePage object at 0x0000017CB024B770>\n\n    def verify_assign_leave(self):\n        self.page.get_by_role(\"link\", name=\"Assign Leave \").click()\n>       expect(self.page).to_have_url(re.compile(\"Assign Leave \"))\nE       AssertionError: Page URL expected to be 're.compile('Assign Leave ')'\nE       Actual value: https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave \nE       Call log:\nE         - Expect \"to_have_url\" with timeout 5000ms\nE           9 \u00d7 unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave\"\n\norange_hrm\\pages\\leave.py:16: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "28 Apr 2026, 16:43",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

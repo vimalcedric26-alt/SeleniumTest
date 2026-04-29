@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "orange_hrm.test.test_login",
+          "name": "test_menu_items",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: 'TestLogin' object has no attribute 'get_by_placeholder'\nDetails: page = <orange_hrm.test.test_login.TestLogin object at 0x000002679BB74FC0>\n\n    def test_menu_items(page):\n>       login = LoginPage(page)\n                ^^^^^^^^^^^^^^^\n\norange_hrm\\test\\test_login.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <orange_hrm.pages.login.LoginPage object at 0x000002679BAF7380>\npage = <orange_hrm.test.test_login.TestLogin object at 0x000002679BB74FC0>\n\n    def __init__(self, page):\n        self.page = page\n>       self.username_input = page.get_by_placeholder(\"Username\")\n                              ^^^^^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'TestLogin' object has no attribute 'get_by_placeholder'\n\norange_hrm\\pages\\login.py:10: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "21 Apr 2026, 13:54",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}
