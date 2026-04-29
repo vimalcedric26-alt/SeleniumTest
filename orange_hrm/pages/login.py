@@ -11,17 +11,19 @@ class LoginPage:
 
     def load(self):
         self.page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
-        self.page.wait_for_load_state("domcontentloaded")
+        self.page.wait_for_load_state("networkidle")
+        self.page.wait_for_selector('input[name="username"]', timeout=15000)
 
     def login(self, username, password):
         self.username_input.fill(username)
         self.password_input.fill(password)
         self.login_input.click()
 
-        # ---- CRITICAL JENKINS WAIT ----
         self.page.wait_for_load_state("networkidle")
-        self.page.wait_for_timeout(4000)
-        expect(self.page).to_have_url(re.compile("dashboard"), timeout=15000)
+        self.page.wait_for_url("**/dashboard/**", timeout=20000)
+        self.page.wait_for_selector(".oxd-sidepanel-body", timeout=20000)
+        self.page.wait_for_timeout(3000)
+
         expect(self.page.locator(".oxd-userdropdown-name")).to_be_visible(timeout=15000)
 
     def verify_login_success(self):

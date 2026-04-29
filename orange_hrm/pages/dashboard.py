@@ -9,6 +9,7 @@ class DashboardPage:
 
     def verify_menu_items_click(self):
         menu_list = ["Admin", "PIM", "Leave", "Time", "Recruitment", "My Info", "Performance", "Dashboard"]
+        self.page.wait_for_selector(".oxd-sidepanel-body", timeout=20000)
 
         for menu in menu_list:
             item = self.page.get_by_role("link", name=menu)
