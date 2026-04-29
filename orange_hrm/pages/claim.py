@@ -7,22 +7,27 @@ class ClaimPage:
         self.page = page
 
     def verify_claim_click(self):
-        self.page.get_by_role("link", name="Claim").click()
-        expect(self.page).to_have_url(re.compile("claim"))
+        claim_menu = self.page.get_by_role("link", name="Claim")
+        expect(claim_menu).to_be_visible(timeout=15000)
+        claim_menu.click()
+
+        self.page.wait_for_load_state("networkidle")
+        expect(self.page).to_have_url(re.compile("claim"), timeout=15000)
 
     def initiate_claim_request(self):
-        # Assign Claim button
         assign_btn = self.page.get_by_role("button", name="Assign Claim")
-        expect(assign_btn).to_be_visible()
+        expect(assign_btn).to_be_visible(timeout=15000)
         assign_btn.click()
+
+        self.page.wait_for_load_state("networkidle")
+        self.page.wait_for_timeout(2000)
 
     def enter_claim_details(self):
         field = self.page.get_by_placeholder("Type for hints...")
         field.fill("a")
-        self.page.wait_for_selector(".oxd-autocomplete-option")
+        self.page.wait_for_selector(".oxd-autocomplete-option", timeout=15000)
         self.page.locator(".oxd-autocomplete-option").nth(1).click()
 
-        # Dropdowns
         dropdowns = self.page.locator("div.oxd-select-text")
 
         dropdowns.nth(0).click()
@@ -34,34 +39,31 @@ class ClaimPage:
         remarks = self.page.locator("textarea")
         remarks.fill("Automated Claim Submission")
 
-        # Create claim
         create_btn = self.page.get_by_role("button", name="Create")
-        expect(create_btn).to_be_visible()
-        create_btn.click(no_wait_after=True)
+        expect(create_btn).to_be_visible(timeout=15000)
+        create_btn.click()
 
+        self.page.wait_for_load_state("networkidle")
         self.page.wait_for_timeout(3000)
 
     def verify_claim_success_message(self):
-        self.page.wait_for_timeout(3000)
-
         toast = self.page.locator(".oxd-toast")
-        if toast.count() > 0:
-            expect(toast).to_be_visible()
-        else:
-            error_msg = self.page.locator(".oxd-input-field-error-message")
-            expect(error_msg).to_have_count(0)
+        expect(toast).to_be_visible(timeout=15000)
 
     def verify_claim_history_present(self):
-        # Navigate to My Claims
-        self.page.get_by_role("link", name="My Claims").click()
+        my_claims = self.page.get_by_role("link", name="My Claims")
+        expect(my_claims).to_be_visible(timeout=15000)
+        my_claims.click()
 
-        expect(self.page).to_have_url(re.compile("viewClaim"))
+        self.page.wait_for_load_state("networkidle")
+        expect(self.page).to_have_url(re.compile("viewClaim"), timeout=15000)
 
         search_btn = self.page.get_by_role("button", name="Search")
-        expect(search_btn).to_be_visible()
-        search_btn.click(no_wait_after=True)
+        expect(search_btn).to_be_visible(timeout=15000)
+        search_btn.click()
 
+        self.page.wait_for_load_state("networkidle")
         self.page.wait_for_timeout(3000)
 
         reset_btn = self.page.get_by_role("button", name="Reset")
-        expect(reset_btn).to_be_visible()
+        expect(reset_btn).to_be_visible(timeout=15000)
