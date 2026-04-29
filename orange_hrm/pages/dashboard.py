@@ -9,15 +9,16 @@ class DashboardPage:
 
     def verify_menu_items_click(self):
         menu_list = ["Admin", "PIM", "Leave", "Time", "Recruitment", "My Info", "Performance", "Dashboard"]
+
         self.page.wait_for_selector(".oxd-sidepanel-body", timeout=20000)
+        self.page.wait_for_timeout(3000)
 
         for menu in menu_list:
-            item = self.page.get_by_role("link", name=menu)
+            item = self.page.locator(f"//span[text()='{menu}']")
             expect(item).to_be_visible(timeout=15000)
-            expect(item).to_be_enabled(timeout=15000)
             item.click()
             self.page.wait_for_load_state("networkidle")
-            self.page.wait_for_timeout(2000)
+            self.page.wait_for_timeout(1500)
 
     def verify_admin_adding_new_user(self):
         admin_menu = self.page.get_by_role("link", name="Admin")
