@@ -1,30 +1,28 @@
-
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 
 
 class Checkout:
-    def __init__(self,driver):
+
+    def __init__(self, driver):
         self.driver = driver
-        # self.check_out_input = (By.XPATH,"//button[@id='checkout']")
-        self.firstname_input = (By.NAME,"firstName")
-        self.lastname_input = (By.NAME, "lastName")
-        self.code_input = (By.NAME, "postalCode")
-        self.continue_input = (By.NAME, "continue")
-        self.finish_input = (By.NAME,"finish")
+
         self.check_out_input = (By.ID, "checkout")
 
+        self.firstname_input = (By.ID, "first-name")
+        self.lastname_input = (By.ID, "last-name")
+        self.postalcode_input = (By.ID, "postal-code")
+
+        self.continue_btn = (By.ID, "continue")
+        self.finish_btn = (By.ID, "finish")
+
     def check_out_details(self):
-        WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable(self.check_out_input)
-        ).click()
+        self.driver.find_element(*self.check_out_input).click()
 
     def checkout_information(self):
-        self.driver.find_element(*self.firstname_input).send_keys("vimal")
-        self.driver.find_element(*self.lastname_input).send_keys("cedric")
-        self.driver.find_element(*self.code_input).send_keys("560047")
+        self.driver.find_element(*self.firstname_input).send_keys("Vimal")
+        self.driver.find_element(*self.lastname_input).send_keys("Cedric")
+        self.driver.find_element(*self.postalcode_input).send_keys("635001")
 
-        self.driver.find_element(*self.continue_input).click()
-        self.driver.find_element(*self.finish_input).click()
+        self.driver.find_element(*self.continue_btn).click()
 
+        self.driver.find_element(*self.finish_btn).click()
